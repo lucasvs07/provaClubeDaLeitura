@@ -29,6 +29,12 @@ namespace provaClubeDaLeitura.ConsoleApp
 
             else if (opcaoMenuPrincipal == 2)
             {
+                Emprestimo  chamaMenuEmprestimo = new Emprestimo();
+                chamaMenuEmprestimo.MenuEmprestimo();
+            }
+
+            else if (opcaoMenuPrincipal == 7)
+            {
                 TelaVisualizacao chamaTelaVisualizacao = new TelaVisualizacao();
                 chamaTelaVisualizacao.VisualizarRegistros(ref);
             }
