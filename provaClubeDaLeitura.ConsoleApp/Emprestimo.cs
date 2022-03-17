@@ -4,14 +4,14 @@ namespace provaClubeDaLeitura.ConsoleApp
 {
     public class Emprestimo
     {
-        static Emprestimo[] listaCompletaDeEmprestimos = new Emprestimo[10];
+        
         public string amigoQuePegou;
         public string revistaemprestada;
-        public DateTime datadoemprestimo;
+        public int datadoemprestimo;
         public string datadadevolucao;
         public int contadorDeEmprestimosAtivos = 0;
 
-        public void MenuEmprestimo()
+        public void MenuEmprestimo(ref Revista[] listaDeRevistas, ref Emprestimo[] listaCompletaDeEmprestimos)
         {
             while (true)
 
@@ -22,7 +22,7 @@ namespace provaClubeDaLeitura.ConsoleApp
                 if (opcaoFinal == "1")
                 {
                     MenuInicial ChamarMenu = new MenuInicial();
-                    ChamarMenu.ApresentarMenuInicial();
+                    ChamarMenu.ApresentarMenuInicial(ref listaDeRevistas, ref listaCompletaDeEmprestimos);
                     break;
                 }
                 else if (opcaoFinal == "2")
@@ -42,7 +42,7 @@ namespace provaClubeDaLeitura.ConsoleApp
             }
         }
 
-        public void CadastrarEmprestimo(ref Emprestimo[] listaCompletaDeEmprestimos)
+        public bool CadastrarEmprestimo(ref Emprestimo[] listaCompletaDeEmprestimos)
         {
             Console.Clear();
 
@@ -55,7 +55,7 @@ namespace provaClubeDaLeitura.ConsoleApp
             novoEmprestimo.amigoQuePegou = Console.ReadLine();
 
             Console.WriteLine("Qual a data do empréstimo?");
-            novoEmprestimo.datadoemprestimo = DateTime.TryParse(Console.ReadLine());
+            //novoEmprestimo.datadoemprestimo = DateTime.TryParse(Console.ReadLine());
 
             
 
@@ -66,9 +66,9 @@ namespace provaClubeDaLeitura.ConsoleApp
 
             Console.WriteLine();
             Console.WriteLine();
-            if()
+            //if()
 
-            listaCompletaDeEmprestimos[contadorDeEmprestimosAtivos] = novoEmprestimo;
+            //listaCompletaDeEmprestimos[contadorDeEmprestimosAtivos] = novoEmprestimo;
 
             contadorDeEmprestimosAtivos++;
             return true;

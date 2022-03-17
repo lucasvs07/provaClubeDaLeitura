@@ -2,21 +2,23 @@
 
 namespace provaClubeDaLeitura.ConsoleApp
 {
-    internal class TelaVisualizacao
+    public class TelaVisualizacao
     {
        public void VisualizarRegistros(ref Revista[] listaDeRevistas)
         {
             Revista chamaLista = new Revista();
             
             int i = 0;
-            for (i = 0; i < listaDeRevistas.Length; i++)
+            foreach (Revista item in listaDeRevistas)
             {
-                if (listaDeRevistas[i] != null)
-                {
-                    Console.WriteLine(listaDeRevistas[i]);
-                }
+                Console.WriteLine(item.nomeDaRevista);
+                Console.WriteLine(item.numeroDaEdicao);
+                Console.WriteLine(item.tipoDeColecao);
+                Console.WriteLine(item.anoDaRevista);
+                Console.WriteLine(item.caixa);
+                Console.ReadKey();
             }
-            
         }
     }
 }
+ 

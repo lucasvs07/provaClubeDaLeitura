@@ -2,23 +2,24 @@
 
 namespace provaClubeDaLeitura.ConsoleApp
 {
-
+    
     internal class Program
     {
         static Amigo[] listaDeAmigos = new Amigo[100];
-        //Revista[] listaDeRevistas = new Revista[100];
-       
+        static Revista[] listaDeRevistas = new Revista[100];
+        static Emprestimo[] listaCompletaDeEmprestimos = new Emprestimo[10];
+        static int contadorDeRevistas = 0;
 
         static void Main(string[] args)
         {
             Console.Title = "Clube da leitura do Gustavo.";
 
             MenuInicial ChamarMenu = new MenuInicial();
-            ChamarMenu.ApresentarMenuInicial();
+            ChamarMenu.ApresentarMenuInicial(ref listaDeRevistas, ref listaCompletaDeEmprestimos);
 
 
 
-            Caixa novaCaixa = new Caixa();
+            /*Caixa novaCaixa = new Caixa();
             novaCaixa.cor = "Vermelho";
             novaCaixa.numero = 12345;
             novaCaixa.etiqueta = "SpiderBox";
@@ -42,7 +43,7 @@ namespace provaClubeDaLeitura.ConsoleApp
             novoemprestimo.amigoQuePegou = lucas.nome;
             novoemprestimo.revistaemprestada = revista1.nomeDaRevista;
             novoemprestimo.datadoemprestimo = 190876;
-            novoemprestimo.datadadevolucao = 190878;
+            //novoemprestimo.datadadevolucao = 190878;*/
 
         }
     }
